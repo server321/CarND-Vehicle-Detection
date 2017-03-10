@@ -88,16 +88,8 @@ Number of non-vehicle files: 1125
 # 2. Make Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a Linear SVM (Support Vector Machine) classifier. Combine the HOG feature vector with color transform and binned color features
 
 
-I try different combinations of parameters - color spaces and HOG options. The most valuable is HLS color space. RGB color space is not relyable because it is too dependant from changing light conditions. YUV and YCrCb is also not very stable. I choose HLS colour pace and value of pixels_per_cell=(8,8). Using values larger than cells_per_block=(2,2) did not improve results substancially. I used a linear SVM with all channels of images. I included spatial features color features as well as all three HLS channels. For color binning I use spatial_size=(16,16). For color histograms I used hist_bins=32. Test Accuracy of SVC = 0.9906
+I try different combinations of parameters - color spaces and HOG options. The most valuable is HLS color space. RGB color space is not relyable because it is too dependant from changing light conditions. YUV and YCrCb is also not very stable. I choose HLS colour pace and value of pixels_per_cell=(8,8). Using values larger than cells_per_block=(2,2) did not improve results substancially. I used a linear SVM with all channels of images. I included spatial features color features as well as all three HLS channels. For color binning I use spatial_size=(16,16). For color histograms I used hist_bins=32. Test Accuracy of SVC = 0.9897
 
-74.85 Seconds to extract HOG features...
-Using: 9 orientations 8 pixels per cell and 2 cells per block
-Feature vector length: 8460
-8.02 Seconds to train SVC...
-Test Accuracy of SVC =  0.9897
-My SVC predicts:      [ 0.  1.  1.  1.  0.  0.  0.  1.  1.  1.]
-For these 10 labels:  [ 0.  1.  1.  1.  0.  0.  0.  1.  1.  1.]
-0.001 Seconds to predict 10 labels with SVC
 
 # 3. Implement sliding-window scheme to search for cars using the trained SVM
 
