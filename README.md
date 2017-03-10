@@ -129,6 +129,8 @@ Final video output (youtube):
 
 # Discussion
 Pipeline works at the whole but it has some faults. That's why I will make some improvements:
+
 1. I'd like to implement YOLO Real-Time Object Detection. This technics could be faster:
 https://pjreddie.com/darknet/yolo/
+
 2. My CarND Vehicle Detection implementation still have some false positives and undetected vehicles. Thus I am going to check parameters and tune the model. Also I am going to use more labeled data.
